@@ -11,3 +11,6 @@ elif signal == green:
     print('Поехали')
 else:
     print('Смотрим по ситуации')
+
+def plus(a,b):
+    return a+b
