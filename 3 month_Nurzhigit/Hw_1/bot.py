@@ -66,7 +66,7 @@ async def quiz3 (call:types.callback_query):
 @dp.callback_query_handler(lambda func: func.data =="button_call_3")
 async def quiz4 (call:types.callback_query):
     question4 =  'Дан список list2 =[8, 12, 45, 67, 89, 45]' \
-      ' Выберите правильный вариант решения чтобы результат был таким: ' \
+      ' Выберите правильный вариант решения ,чтобы результат был таким: ' \
       'list2 =[8, 12, 45, 67, 89, 45, 8, 12, 45, 67, 89, 45]'
     answer4 = ['for i in list2:list2.append(i)',
                'for list2 in list2:list1.append(list2)', 'for list2.append[list2]',
