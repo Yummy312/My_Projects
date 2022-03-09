@@ -47,6 +47,10 @@ async def quiz2 (call:types.callback_query):
 
 @dp.callback_query_handler(lambda func: func.data =="button_call_2")
 async def quiz3 (call:types.callback_query):
+    markup = InlineKeyboardMarkup()
+    button_call_3 = InlineKeyboardButton("Следующий",
+                                         callback_data="button_call_3")
+    markup.add(button_call_3)
     question3 = 'Какое из них не является законным именем переменной?'
     answer3 = ['_Myvar', 'my-var', 'my_var', '_myvar']
     await bot.send_poll(call.message.chat.id,
@@ -58,13 +62,13 @@ async def quiz3 (call:types.callback_query):
                         explanation='output function')
 
 
-@dp.callback_query_handler(lambda func: func.data =="button_call_2")
+@dp.callback_query_handler(lambda func: func.data =="button_call_3")
 async def quiz3 (call:types.callback_query):
-    question3 = ''
-    answer3 = ['_Myvar', 'my-var', 'my_var', '_myvar']
+    question4 =  'Дан список list2 =[8, 12, 45, 67, 89, 45]' \
+      ' Выберите правильный вариант решения чтобы результат был таким: ' \
+      'list2 =[8, 12, 45, 67, 89, 45, 8, 12, 45, 67, 89, 45]'
     await bot.send_poll(call.message.chat.id,
-                        question= question3,
-                        options=answer3,
+                        question= question4,
                         is_anonymous=False,
                         type='quiz',
                         correct_option_id=1,
